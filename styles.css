@@ -1,0 +1,112 @@
+:root {
+  color-scheme: light dark;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #111;
+  color: #f4f4f4;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+h1,
+h2 {
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-top: 0;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+select,
+button {
+  font: inherit;
+  padding: 0.45rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #555;
+}
+
+button {
+  cursor: pointer;
+  background: #242424;
+  color: #fff;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.diagram {
+  margin-top: 2rem;
+}
+
+.keyboard-diagram {
+  position: relative;
+  width: 100%;
+  max-width: 760px;
+  padding-top: 4.5rem;
+}
+
+.white-keys {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 0.3rem;
+}
+
+.black-keys {
+  position: absolute;
+  top: 0;
+  left: 2.2rem;
+  width: calc(100% - 4.4rem);
+  display: grid;
+  grid-template-columns: repeat(13, 1fr);
+  gap: 0.4rem;
+  z-index: 2;
+}
+
+.key {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: 700;
+  min-height: 6.8rem;
+  user-select: none;
+}
+
+.key small {
+  display: block;
+  font-weight: 500;
+}
+
+.white {
+  background: #fdfdfd;
+  color: #111;
+  border: 1px solid #bbb;
+}
+
+.black {
+  min-height: 4.8rem;
+  background: #131313;
+  border: 1px solid #666;
+  color: #fff;
+}
+
+.black.gap {
+  visibility: hidden;
+}
