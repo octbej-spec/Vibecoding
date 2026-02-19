@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clavier Musical</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Clavier musical</h1>
+      <p>
+        Jouez avec le clavier : <strong>A à L</strong> pour les touches blanches,
+        <strong>Q à P</strong> pour les touches noires.
+      </p>
+
+      <section class="controls" aria-label="Contrôles principaux">
+        <label for="instrument">Instrument</label>
+        <select id="instrument">
+          <option value="piano">Piano</option>
+          <option value="guitar">Guitare</option>
+          <option value="synth">Synthé</option>
+          <option value="bass">Basse</option>
+          <option value="drums">Batterie</option>
+        </select>
+
+        <button id="record-toggle" type="button">Démarrer l’enregistrement</button>
+        <button id="export-midi" type="button" disabled>Exporter MIDI</button>
+        <button id="export-wav" type="button" disabled>Exporter WAV</button>
+      </section>
+
+      <section class="diagram" aria-label="Schéma clavier vers notes">
+        <h2>Schéma des correspondances (statique)</h2>
+        <div class="keyboard-diagram">
+          <div class="black-keys">
+            <span class="key black">Q<br /><small>C#4</small></span>
+            <span class="key black">W<br /><small>D#4</small></span>
+            <span class="key black gap"></span>
+            <span class="key black">E<br /><small>F#4</small></span>
+            <span class="key black">R<br /><small>G#4</small></span>
+            <span class="key black">T<br /><small>A#4</small></span>
+            <span class="key black gap"></span>
+            <span class="key black">Y<br /><small>C#5</small></span>
+            <span class="key black">U<br /><small>D#5</small></span>
+            <span class="key black gap"></span>
+            <span class="key black">I<br /><small>F#5</small></span>
+            <span class="key black">O<br /><small>G#5</small></span>
+            <span class="key black">P<br /><small>A#5</small></span>
+          </div>
+          <div class="white-keys">
+            <span class="key white">A<br /><small>C4</small></span>
+            <span class="key white">S<br /><small>D4</small></span>
+            <span class="key white">D<br /><small>E4</small></span>
+            <span class="key white">F<br /><small>F4</small></span>
+            <span class="key white">G<br /><small>G4</small></span>
+            <span class="key white">H<br /><small>A4</small></span>
+            <span class="key white">J<br /><small>B4</small></span>
+            <span class="key white">K<br /><small>C5</small></span>
+            <span class="key white">L<br /><small>D5</small></span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
